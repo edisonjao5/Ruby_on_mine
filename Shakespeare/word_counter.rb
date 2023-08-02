@@ -1,4 +1,5 @@
 FILE_NAME = "./Shakespeare/romeo-juliet.txt"
+REFERENCE_FILE_NAME = "./Shakespeare/hamlet.txt"
 
 #load the words from the file
 def words_from_file(file_name)
@@ -12,7 +13,13 @@ end
 
 #load the list of words
 words = words_from_file(FILE_NAME)
+words_to_remove = words_from_file(REFERENCE_FILE_NAME).uniq
 # puts words
+
+#remove the words from the reference file
+words_to_remove.each do |word|
+  words.delete(word)
+end
 
 #create a hash to store the word count
 WORD_COUNT = {}
