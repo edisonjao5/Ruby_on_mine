@@ -13,6 +13,10 @@ def classic_jazz(album)
   album[2] == "Jazz" and album[3].to_i.between?(1950, 1959)
 end
 
+def print_album(album)
+  puts "Album: #{album[0]} - #{album[1]} (#{album[3]})"
+end
+
 # puts classic_jazz(albums[1])
 # puts classic_jazz(albums[-1])
 
